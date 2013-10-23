@@ -21,6 +21,7 @@
   </metadata>
   <files>
     <file src="FsLab.fsx" target="lib" />
+    <file src="FsLabWithR.fsx" target="lib" />
   </files>
 </package>
 
