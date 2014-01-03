@@ -17,8 +17,9 @@
       <dependency id="Deedle" version="0.9.12" />
       <dependency id="Deedle.RPlugin" version="0.9.12" />
       <dependency id="FSharp.Charting" version="0.90.5" />
-      <dependency id="MathNet.Numerics.FSharp" version="3.0.0-alpha5" />
-    </dependencies>    
+      <dependency id="MathNet.Numerics" version="3.0.0-alpha7" />
+      <dependency id="MathNet.Numerics.FSharp" version="3.0.0-alpha7" />
+    </dependencies>
   </metadata>
   <files>
     <file src="FsLab.fsx" target="." />
