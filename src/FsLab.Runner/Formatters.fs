@@ -243,10 +243,10 @@ let createFsiEvaluator root output (floatFormat:string) =
           ] }
       |> f.Apply
 
-    | :? Matrix<double> as m -> Some [ MathDisplay (m |> formatMatrix (fun x -> x.ToString(floatFormat))) ]
     | :? Matrix<float> as m -> Some [ MathDisplay (m |> formatMatrix (fun x -> x.ToString(floatFormat))) ]
-    | :? Vector<double> as v -> Some [ MathDisplay (v |> formatVector (fun x -> x.ToString(floatFormat))) ]
+    | :? Matrix<float32> as m -> Some [ MathDisplay (m |> formatMatrix (fun x -> x.ToString(floatFormat))) ]
     | :? Vector<float> as v -> Some [ MathDisplay (v |> formatVector (fun x -> x.ToString(floatFormat))) ]
+    | :? Vector<float32> as v -> Some [ MathDisplay (v |> formatVector (fun x -> x.ToString(floatFormat))) ]
 
     | _ -> None 
     
