@@ -58,19 +58,19 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CSharpFormat">
-      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.10\lib\net40\CSharpFormat.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.36\lib\net40\CSharpFormat.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Deedle">
-      <HintPath>$(SolutionDir)\packages\Deedle.1.0.1\lib\net40\Deedle.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\Deedle.1.0.6\lib\net40\Deedle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Deedle.RProvider.Plugin">
-      <HintPath>$(SolutionDir)\packages\Deedle.RPlugin.1.0.1\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\Deedle.RPlugin.1.0.6\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.Charting">
-      <HintPath>$(SolutionDir)\packages\FSharp.Charting.0.90.6\lib\net40\FSharp.Charting.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Charting.0.90.7\lib\net40\FSharp.Charting.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Foogle.Charts">
@@ -78,30 +78,30 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.CodeFormat">
-      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.10\lib\net40\FSharp.CodeFormat.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.36\lib\net40\FSharp.CodeFormat.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.Compiler.Interactive.Settings">
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Compiler.Service">
-      <HintPath>$(SolutionDir)\packages\FSharp.Compiler.Service.0.0.44\lib\net40\FSharp.Compiler.Service.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Compiler.Service.0.0.67\lib\net40\FSharp.Compiler.Service.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.Data">
-      <HintPath>$(SolutionDir)\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Data.2.0.14\lib\net40\FSharp.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.Literate">
-      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.10\lib\net40\FSharp.Literate.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.36\lib\net40\FSharp.Literate.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.Markdown">
-      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.10\lib\net40\FSharp.Markdown.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.36\lib\net40\FSharp.Markdown.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FSharp.MetadataFormat">
-      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.10\lib\net40\FSharp.MetadataFormat.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FSharp.Formatting.2.4.36\lib\net40\FSharp.MetadataFormat.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FsLab.Runner">
@@ -109,11 +109,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MathNet.Numerics">
-      <HintPath>$(SolutionDir)\packages\MathNet.Numerics.3.0.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\MathNet.Numerics.3.3.0\lib\net40\MathNet.Numerics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MathNet.Numerics.FSharp">
-      <HintPath>$(SolutionDir)\packages\MathNet.Numerics.FSharp.3.0.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\MathNet.Numerics.FSharp.3.3.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -137,11 +137,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="RProvider">
-      <HintPath>$(SolutionDir)\packages\RProvider.1.0.13\lib\net40\RProvider.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\RProvider.1.0.17\lib\net40\RProvider.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RProvider.Runtime">
-      <HintPath>$(SolutionDir)\packages\RProvider.1.0.13\lib\net40\RProvider.Runtime.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\RProvider.1.0.17\lib\net40\RProvider.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
