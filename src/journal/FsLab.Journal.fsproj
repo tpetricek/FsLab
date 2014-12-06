@@ -105,7 +105,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="FsLab.Runner">
-      <HintPath>$(SolutionDir)\packages\FsLab.Runner.0.0.17\lib\net40\FsLab.Runner.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\FsLab.Runner.0.0.20\lib\net40\FsLab.Runner.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MathNet.Numerics">
@@ -158,8 +158,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <Target Name="AfterBuild">
-    <Copy SourceFiles="$(SolutionDir)\packages\FsLab.Runner.0.0.17\tools\build.fsx" DestinationFolder="." ContinueOnError="true" />
-    <Copy SourceFiles="$(SolutionDir)\packages\FsLab.Runner.0.0.17\tools\build.cmd" DestinationFolder="." ContinueOnError="true" />
-    <Copy SourceFiles="$(SolutionDir)\packages\FsLab.Runner.0.0.17\tools\NuGet.exe" DestinationFolder="build" ContinueOnError="true" />
+    <Copy SourceFiles="$(SolutionDir)\packages\FsLab.Runner.0.0.20\tools\build.fsx" DestinationFolder="." ContinueOnError="true" />
+    <Copy SourceFiles="$(SolutionDir)\packages\FsLab.Runner.0.0.20\tools\build.cmd" DestinationFolder="." ContinueOnError="true" />
+    <Copy SourceFiles="$(SolutionDir)\packages\FsLab.Runner.0.0.20\tools\NuGet.exe" DestinationFolder="build" ContinueOnError="true" />
   </Target>
 </Project>
