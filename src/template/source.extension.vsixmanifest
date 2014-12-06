@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="FsLab.Journal-1" Version="0.0.17" Language="en-US" Publisher="F# Data Science working group" />
+    <Identity Id="FsLab.Journal-1" Version="0.0.20" Language="en-US" Publisher="F# Data Science working group" />
     <DisplayName>FsLab Journal</DisplayName>
     <Description xml:space="preserve">Template that makes it easy to do interactive data analysis using F# Interactive and produce nice HTML reports of your work.</Description>
     <MoreInfo>http://www.fslab.org</MoreInfo>
