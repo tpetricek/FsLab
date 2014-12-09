@@ -1,6 +1,6 @@
 (*** hide ***)
 #I ".."
-#load "packages/FsLab.0.0.17/FsLab.fsx"
+#load "packages/FsLab.0.0.20/FsLab.fsx"
 (**
 
 FsLab Walkthrough

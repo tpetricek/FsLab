@@ -38,20 +38,20 @@ let tags = "F# fsharp deedle series statistics data science r type provider math
 /// List of packages included in FsLab
 /// (Version information is generated automatically based on 'FsLab.nuspec')
 let packages = 
-  [ "Deedle", "1.0.1"
-    "Deedle.RPlugin", "1.0.1"
-    "FSharp.Charting", "0.90.6"
-    "FSharp.Data", "2.0.9"
+  [ "Deedle", "1.0.6"
+    "Deedle.RPlugin", "1.0.6"
+    "FSharp.Charting", "0.90.7"
+    "FSharp.Data", "2.0.14"
     "Foogle.Charts", "0.0.2"
-    "MathNet.Numerics", "3.0.0"
-    "MathNet.Numerics.FSharp", "3.0.0"
-    "RProvider", "1.0.13"
+    "MathNet.Numerics", "3.3.0"
+    "MathNet.Numerics.FSharp", "3.3.0"
+    "RProvider", "1.0.17"
     "R.NET.Community", "1.5.15" 
     "R.NET.Community.FSharp", "0.1.8" ]
 
 let journalPackages = 
-  [ "FSharp.Compiler.Service", "0.0.44"
-    "FSharp.Formatting", "2.4.10" 
+  [ "FSharp.Compiler.Service", "0.0.67"
+    "FSharp.Formatting", "2.4.36" 
     "Microsoft.AspNet.Razor", "2.0.30506.0"
     "RazorEngine", "3.3.0" ]
 
