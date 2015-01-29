@@ -226,7 +226,7 @@ let createFsiEvaluator root output (floatFormat:string) =
         ensureDirectory (output @@ "images")
       
         // We need to reate host control, but it does not have to be visible
-        ( use ctl = new ChartControl(chartStyle ch, Dock = DockStyle.Fill, Width=500, Height=300)
+        ( use ctl = new ChartControl(chartStyle ch, Dock = DockStyle.Fill, Width=1200, Height=720)
           ch.CopyAsBitmap().Save(output @@ "images" @@ file, System.Drawing.Imaging.ImageFormat.Png) )
         Some [ Paragraph [DirectImage ("", (root + "/images/" + file, None))]  ]
 
