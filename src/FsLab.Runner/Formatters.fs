@@ -178,6 +178,7 @@ let wrapFsiEvaluator root output (floatFormat:string) (fsiEvaluator:FsiEvaluator
     (fun () -> incr count; !count)
   let imageCounter = createCounter ()
   let foogleCounter = createCounter ()
+  let plotlyCounter = createCounter ()
 
   let transformation (value:obj, typ:System.Type) =
     match value with 
@@ -196,8 +197,13 @@ let wrapFsiEvaluator root output (floatFormat:string) (fsiEvaluator:FsiEvaluator
         Some [ InlineBlock ch.InlineHtml ]
 
     | :? Plotly.PlotlyChart as ch ->
-        // Just return the inline HTML for a Plotly chart
-        Some [ InlineBlock (ch.GetInlineHtml()) ]
+        // Load plotly library and return the inline HTML for a Plotly chart,
+        // or just return the inline HTML, if the library has laready been loaded.
+        let count = plotlyCounter()
+        let htmlChart = ch.GetInlineHtml()
+        let htmlOnce = """<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>"""
+        let html = if count = 1 then htmlOnce + htmlChart else htmlChart
+        Some [ InlineBlock (html) ]
 
     | :? ChartTypes.GenericChart as ch ->
         // Pretty print F# Chart - save the chart to the "images" directory 
