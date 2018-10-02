@@ -93,6 +93,7 @@ let packageVersions = dict (packages @ ["FSharp.Literate.Scripts", release.Nuget
 Target "Clean" (fun _ ->
   CleanDirs ["temp"; "nuget"; buildDir ]
 )
+let fsc = (if isUnix then "fsharpc" else "fsc.exe")
 
 
 Target "UpdateFsLabScript" (fun _ ->
@@ -141,10 +142,10 @@ Target "UpdateFsLabScript" (fun _ ->
       File.WriteAllLines(__SOURCE_DIRECTORY__ + "/src/FsLab.fsx", lines)
 
   // Check that FsLab.fsx now compiles in FSI.EXE mode
-  exec "fsc" "src/FsLab.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --nocopyfsharpcore --out:bin/test-compile-FsLab.exe" "."
+  exec fsc "src/FsLab.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --nocopyfsharpcore --out:bin/test-compile-FsLab.exe" "."
 
   // Check that FsLab.fsx now compiles in HAS_FSI_ADDHTMLPRINTER (fsx2html, iFSharp) ) mode
-  exec "fsc" "src/Mock/Mock.fsx src/FsLab.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --define:HAS_FSI_ADDHTMLPRINTER --nocopyfsharpcore --out:bin/test-compile-FsLab-HtmlPrinters.exe" "."
+  exec fsc "src/Mock/Mock.fsx src/FsLab.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --define:HAS_FSI_ADDHTMLPRINTER --nocopyfsharpcore --out:bin/test-compile-FsLab-HtmlPrinters.exe" "."
 
 )
 
@@ -227,7 +228,7 @@ Target "UpdateAndCheckTemplates" (fun _ ->
   exec ".paket/paket.exe" "update" "src/journal"
 
   // Check that journal/build.fsx compiles in FSI.EXE mode
-  exec "fsc" "build.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --nocopyfsharpcore --out:../../bin/test-compile-journal-build.fsx" "src/journal"
+  exec fsc "build.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --nocopyfsharpcore --out:../../bin/test-compile-journal-build.fsx" "src/journal"
 
   // Check that journal/build.fsx runs in FAKE mode
   exec "packages/FAKE/tools/FAKE.exe" "build.fsx html" "src/journal"
@@ -379,7 +380,7 @@ Target "TestDotnetTemplatesNuGet" (fun _ ->
             exec "msbuild" (sprintf "%s/%s.fsproj /p:Platform=\"%s\" /p:Configuration=%s /p:PackageSources=%s\"https://api.nuget.org/v3/index.json%s;%s%s\"" testAppName testAppName p c  slash slash pkgs slash) "."
 
     let slash = if isUnix then "\\" else ""
-    exec "fsc" (sprintf "%s/%s.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nocopyfsharpcore" testAppName testAppName) "."
+    exec fsc (sprintf "%s/%s.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nocopyfsharpcore" testAppName testAppName) "."
     
     // Check the processing of the scripts to HTML and LaTeX works
     exec "packages/FAKE/tools/FAKE.exe" "build.fsx html" testAppName
