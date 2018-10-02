@@ -40,9 +40,9 @@ type ProcessingContext =
     { Root = root 
       Output = Path.Combine(root, "output")
       OutputKind = OutputKind.Html 
-      Styles = Some (if Directory.Exists (__SOURCE_DIRECTORY__ + "/styles") then  __SOURCE_DIRECTORY__ 
-                               elif Directory.Exists (__SOURCE_DIRECTORY__ + "/../styles") then  __SOURCE_DIRECTORY__ + "/.."
-                               else failwith "couldn't find styles")
+      Styles = Some (if Directory.Exists (root + "/styles") then  root 
+                     elif Directory.Exists (root + "/../styles") then  root + "/.."
+                     else failwith "couldn't find styles")
       FileWhitelist = None 
       Standalone = false
       FailedHandler = ignore }

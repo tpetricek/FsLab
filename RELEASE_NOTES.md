@@ -1,3 +1,6 @@
+### 1.1.6
+- Fix incorrect use of __SOURCE_DIRECTORY__
+
 ### 1.1.5
 - Update www.google.com --> gstatic.com
 

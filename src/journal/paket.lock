@@ -25,7 +25,7 @@ NUGET
       FSharp.Core
       Newtonsoft.Json (>= 11.0.2)
   remote: https://api.nuget.org/v3/index.json
-    FSharp.Literate.Scripts (1.1.5)
+    FSharp.Literate.Scripts (1.1.6)
       Deedle (1.2.5)
       FSharp.Data (2.4.6)
       Google.DataTable.Net.Wrapper (3.1.2)
@@ -36,7 +36,7 @@ NUGET
       XPlot.GoogleCharts (1.5)
       XPlot.GoogleCharts.Deedle (1.5)
       XPlot.Plotly (1.5)
-    FsLab (1.1.5)
+    FsLab (1.1.6)
       Deedle (1.2.5)
       FSharp.Data (2.4.6)
       Google.DataTable.Net.Wrapper (3.1.2)

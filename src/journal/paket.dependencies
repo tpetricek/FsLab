@@ -41,5 +41,5 @@ nuget XPlot.GoogleCharts.Deedle 1.5.0
 
 
 source https://api.nuget.org/v3/index.json
-nuget FsLab 1.1.5
-nuget FSharp.Literate.Scripts 1.1.5
+nuget FsLab 1.1.6
+nuget FSharp.Literate.Scripts 1.1.6
