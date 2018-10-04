@@ -82,6 +82,11 @@ let exec exe args workingDir =
     let code = Shell.Exec(exe, args, workingDir) 
     if code <> 0 then failwithf "%s %s failed, error code %d" exe args code
 
+
+let execMono exe args workingDir =
+    if isUnix then exec "mono" (exe + " " + args) workingDir 
+    else exec exe args workingDir
+
 // --------------------------------------------------------------------------------------
 // FAKE targets for building FsLab and FSharp.Literate.Scripts NuGet packages
 // --------------------------------------------------------------------------------------
@@ -225,14 +230,14 @@ Target "UpdateAndCheckTemplates" (fun _ ->
   File.AppendAllLines("src/journal/paket.dependencies", [sprintf "nuget FSharp.Literate.Scripts %s" release.NugetVersion])
   
   // Create/update the paket.lock and do a local install of packages
-  exec ".paket/paket.exe" "update" "src/journal"
+  execMono ".paket/paket.exe" "update" "src/journal"
 
   // Check that journal/build.fsx compiles in FSI.EXE mode
   exec fsc "build.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nowarn:988 --nocopyfsharpcore --out:../../bin/test-compile-journal-build.fsx" "src/journal"
 
   // Check that journal/build.fsx runs in FAKE mode
-  exec "packages/FAKE/tools/FAKE.exe" "build.fsx html" "src/journal"
-  exec "packages/FAKE/tools/FAKE.exe" "build.fsx latex" "src/journal"
+  execMono "packages/FAKE/tools/FAKE.exe" "build.fsx html" "src/journal"
+  execMono "packages/FAKE/tools/FAKE.exe" "build.fsx latex" "src/journal"
 
   // Replace the reference to the local source with the place where it will be when published
   File.WriteAllText("src/journal/paket.dependencies", File.ReadAllText("src/journal/paket.dependencies").Replace("source ../../bin", "source https://api.nuget.org/v3/index.json"))
@@ -383,8 +388,8 @@ Target "TestDotnetTemplatesNuGet" (fun _ ->
     exec fsc (sprintf "%s/%s.fsx -r:FSharp.Compiler.Interactive.Settings.dll --nocopyfsharpcore" testAppName testAppName) "."
     
     // Check the processing of the scripts to HTML and LaTeX works
-    exec "packages/FAKE/tools/FAKE.exe" "build.fsx html" testAppName
-    exec "packages/FAKE/tools/FAKE.exe" "build.fsx latex"  testAppName
+    execMono "packages/FAKE/tools/FAKE.exe" "build.fsx html" testAppName
+    execMono "packages/FAKE/tools/FAKE.exe" "build.fsx latex"  testAppName
 
 
     (* Manual steps without building nupkg
