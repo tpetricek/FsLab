@@ -5,7 +5,7 @@ framework: net461
 source https://nuget.org/api/v2
 
 
-nuget FSharp.Core 4.5.0
+nuget FSharp.Core >= 4.5.0
 
 # The build.fsx script uses this
 nuget FAKE 4.64.13
@@ -13,22 +13,22 @@ nuget FAKE 4.64.13
 # Serve localhost images and other linked content from HTML printers in literate programming
 # Also used by fsx2html tool
 # TODO: upgrade to latest Suave
-nuget Suave 2.1.1
+nuget Suave >= 2.1.1
 
 # DataFrames
-nuget Deedle 1.2.5
+nuget Deedle >= 1.2.5
 
 # FSharp.Data
-nuget FSharp.Data 2.4.6
+nuget FSharp.Data >= 2.4.6
 
 # MathNet.Numerics
-nuget MathNet.Numerics 3.20.2
-nuget MathNet.Numerics.FSharp 3.20.2
+nuget MathNet.Numerics >= 3.20.2
+nuget MathNet.Numerics.FSharp >= 3.20.2
 
 # XPlot
-nuget XPlot.Plotly 1.5.0
-nuget XPlot.GoogleCharts 1.5.0
-nuget XPlot.GoogleCharts.Deedle 1.5.0
+nuget XPlot.Plotly >= 1.5.0
+nuget XPlot.GoogleCharts >= 1.5.0
+nuget XPlot.GoogleCharts.Deedle >= 1.5.0
 
 # FSharp.Charting - not referenced by FsLab.fsx by default but you can use it
 # nuget FSharp.Charting
@@ -36,8 +36,8 @@ nuget XPlot.GoogleCharts.Deedle 1.5.0
 # RProvider - not referenced by FsLab.fsx by default but you can use this version
 # nuget R.NET.Community
 # nuget R.NET.Community.FSharp
-# nuget RProvider 1.1.20
-# nuget Deedle.RPlugin 1.2.5
+# nuget RProvider >= 1.1.20
+# nuget Deedle.RPlugin >= 1.2.5
 
 
 #---CUT---
